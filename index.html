@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Employee and Department Management System</title>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Employee and Department Management System</h1>
+        <div class="mt-4">
+            <button id="manageEmployees" class="btn btn-primary" onclick="toggleButtons('employees')">Manage Employees</button>
+            <button id="manageDepartments" class="btn btn-secondary" onclick="toggleButtons('departments')">Manage Departments</button>
+        </div>
+
+        <div id="dropdowns" class="mt-4" style="display: none;">
+            <select id="employeeActions" class="form-control mb-3" onchange="showForm(this.value, 'employee')">
+                <option value="">Select Action</option>
+                <option value="addEmployee">Add Employee</option>
+                <option value="deleteEmployee">Delete Employee</option>
+                <option value="updateEmployee">Update Employee</option>
+                <option value="searchEmployee">Search Employee</option>
+            </select>
+
+            <select id="departmentActions" class="form-control mb-3" onchange="showForm(this.value, 'department')">
+                <option value="">Select Action</option>
+                <option value="addDepartment">Add Department</option>
+                <option value="updateDepartment">Update Department</option>
+                <option value="deleteDepartment">Delete Department</option>
+                <option value="searchDepartment">Search Department</option>
+            </select>
+        </div>
+
+        <div id="formContainer" class="mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
